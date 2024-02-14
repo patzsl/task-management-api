@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "809f9689-649e-42cf-b9d1-573758be7c60",
+		"name": "Task management api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18383071"
+	},
+	"item": [
+		{
+			"name": "tasks",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"4\",\r\n    \"title\": \"meu titulo\",\r\n    \"description\": \"minha descrição\",\r\n    \"status\": \"in progress\",\r\n    \"expiration\": \"2024-02-11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}task",
+							"host": [
+								"{{url}}task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"4\",\r\n    \"title\": \"Estudar programação\",\r\n    \"description\": \"Dedicar 2 horas ao estudo de programação para aprimorar habilidades.\",\r\n    \"status\": \"in progress\",\r\n    \"expiration\": \"2024-02-20\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}task",
+							"host": [
+								"{{url}}task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}task/:id",
+							"host": [
+								"{{url}}task"
+							],
+							"path": [
+								":id"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find By All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}task",
+							"host": [
+								"{{url}}task"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "ma",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "in",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}task/4",
+							"host": [
+								"{{url}}task"
+							],
+							"path": [
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
